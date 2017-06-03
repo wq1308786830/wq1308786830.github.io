@@ -346,3 +346,4 @@ __pycache__/
 # IntelliJ project files
 gen
 !/MyPageServer/src/bin/
+!/MyPageServer/dist/bin/
