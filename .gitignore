@@ -134,7 +134,6 @@ artifacts/
 *.tlh
 *.tmp
 *.tmp_proj
-*.log
 *.vspscc
 *.vssscc
 .builds
@@ -302,11 +301,7 @@ FakesAssemblies/
 
 # Node.js Tools for Visual Studio
 .ntvs_analysis.dat
-node_modules/
-
 # Typescript v1 declaration files
-typings/
-
 # Visual Studio 6 build log
 *.plg
 
@@ -349,8 +344,5 @@ __pycache__/
 ### Example user template
 
 # IntelliJ project files
-.idea
-*.iml
-out
 gen
-!/MyPageServer/bin/
+!/MyPageServer/src/bin/
