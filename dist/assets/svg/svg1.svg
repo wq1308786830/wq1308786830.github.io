@@ -1,0 +1,23 @@
+<svg width="120" height="120" viewBox="0 0 120 120"
+     xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!-- Draw the outline of the motion path in grey, along
+       with 2 small circles at key points -->
+  <path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
+        stroke="lightgrey" stroke-width="2" fill="none" id="theMotionPath"></path>
+  <circle cx="10" cy="110" r="3" fill="lightgrey"></circle>
+  <circle cx="110" cy="10" r="3" fill="lightgrey"></circle>
+
+  <!-- Red circle which will be moved along the motion path. -->
+  <circle cx="" cy="" r="5" fill="red">
+    <!-- Define the motion path animation -->
+    <animateMotion dur="6s" repeatCount="indefinite">
+      <mpath xlink:href="#theMotionPath"></mpath>
+    </animateMotion>
+  </circle>
+  <text font-family="microsoft yahei" font-size="20">马
+    <animateMotion path="M147.9,9.2L37.8,63.8c-49,24.3-46.3,95.1,4.4,115.6L149.6,223c16.5,6.7,35,6.1,51.1-1.5l104.5-49.7
+	c48.2-23,48.2-91.6,0-114.5L203.3,8.8C185.8,0.4,165.3,0.6,147.9,9.2z" begin="0s" dur="3s" rotate="auto" repeatCount="indefinite">
+    </animateMotion>
+  </text>
+</svg>
