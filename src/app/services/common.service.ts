@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {Http, RequestOptions, Headers, Response} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 import {Router} from '@angular/router';
 
 @Injectable()
@@ -8,7 +10,7 @@ export class CommonService {
 
   contentType = 'application/json';
 
-  public apiTest = 'http://localhost:3000/api';
+  public apiTest = 'http://localhost:8080/api';
   public apiHost = 'http://localhost:3000/api';
 
   constructor(public http: Http, public router: Router) { }
@@ -23,7 +25,7 @@ export class CommonService {
       body['token'] = app_token;
     }
 
-    return this.http.post(`${this.apiTest}${url}`, body, options)
+    return this.http.post(`${this.apiHost}${url}`, body, options)
       .map(resp => this.extractData(resp))
       .catch(err => this.handleErr(err));
   }
@@ -38,6 +40,8 @@ export class CommonService {
       alert('未登录');
       this.router.navigate(['/login']);
       throw new Error(body['error']);
+    } else {
+      throw new Error('未确定的状态');
     }
   }
 
