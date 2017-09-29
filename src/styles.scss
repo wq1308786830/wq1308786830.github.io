@@ -1,5 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/_theming';
+@import '~@angular/material/theming';
+
+html, body, md-sidenav-container {
+  font-family: "Raleway",sans-serif!important;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
 
 // NOTE: Theming is currently experimental and not yet publicly released!
 
@@ -62,4 +69,17 @@ body {
   h1 {
     font-size: 20px;
   }
+}
+
+.custom-element {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1;
+  flex-grow: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
 }
