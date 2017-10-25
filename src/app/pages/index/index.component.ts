@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {AdItem} from '../../beans/beans';
+import {AdService} from '../../services/ad.service';
 
 @Component({
   selector: 'app-index',
@@ -8,9 +10,11 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  ads: AdItem[];
+  constructor(public adService: AdService) { }
 
   ngOnInit() {
+    this.ads = this.adService.getAds();
   }
 
 }
