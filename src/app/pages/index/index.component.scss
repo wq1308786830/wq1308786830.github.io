@@ -99,3 +99,37 @@ a {
     font-family: "Playfair Display",serif;
   }
 }
+
+.hero-profile {
+  border: 1px solid gray;
+  padding: 5px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  background-color: lightgreen;
+  color: black;
+}
+
+.job-ad {
+  border: 1px solid gray;
+  padding: 5px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-radius: 10px;
+  background-color: lightblue;
+  color: black;
+}
+
+.ad-banner {
+  width: 400px;
+}
+
+.ads-container {
+  max-width: 75em;
+  margin: auto;
+  padding: 0 0 140px;
+  h3 {
+    color: red;
+    -webkit-mask-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#ff0000), to(rgba(0, 0, 255, 0)));
+  }
+}
