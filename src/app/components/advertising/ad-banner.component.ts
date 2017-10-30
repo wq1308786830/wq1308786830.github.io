@@ -1,7 +1,7 @@
-import {Component, ComponentFactoryResolver, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import {AdDirective} from '../../directives/ad.directive';
-import {AdComponent} from './ad.component';
-import {AdItem} from '../../beans/beans';
+import { Component, ComponentFactoryResolver, Input, OnDestroy, ViewChild, AfterViewInit } from '@angular/core';
+import { AdDirective } from '../../directives/ad.directive';
+import { AdComponent } from './ad.component';
+import { AdItem } from '../../beans/beans';
 
 @Component({
   selector: 'app-ad-banner',
@@ -10,9 +10,10 @@ import {AdItem} from '../../beans/beans';
       <h3>Advertisements</h3>
       <ng-template appAd></ng-template>
     </div>
-  `
+  `,
+  styles: [':host {display: block;}']
 })
-export class AdBannerComponent implements OnInit, OnDestroy {
+export class AdBannerComponent implements AfterViewInit, OnDestroy {
   @Input() ads: AdItem[];
   currentAddIndex = -1;
   @ViewChild(AdDirective) adHost: AdDirective;
@@ -21,7 +22,7 @@ export class AdBannerComponent implements OnInit, OnDestroy {
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {
   }
 
-  ngOnInit() {
+  ngAfterViewInit() {
     this.loadComponent();
     this.getAds();
   }

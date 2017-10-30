@@ -1,7 +1,4 @@
 <app-outlet></app-outlet>
-<div>
-  <app-ad-banner [ads]="ads"></app-ad-banner>
-</div>
 <section class="main-container">
   <article class="column">
     <div class="card clickable" data-href="/lagom-swedish-secret-of-living-well/">
@@ -76,4 +73,7 @@
     </div>
   </article>
 </section>
+<div class="ads-container">
+  <app-ad-banner [ads]="ads"></app-ad-banner>
+</div>
 <router-outlet></router-outlet>
